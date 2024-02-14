@@ -31,6 +31,8 @@ document.querySelector('#rollButton').addEventListener('click', () => {
         loseSound.play();
         computerScore++;
         
+    } else if (userRandomroll == computerRoll){
+        alert(`The dice rolled both ${userRandomroll}, this round is a DRAW!`);
     } 
 
     updateScores();
