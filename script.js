@@ -8,11 +8,5 @@ function makeComputerChoice(){
 
 }
 
-function userChoice(){
-    const userChoices = [1,2,3,4,5,6];
-    const userRoll = userChoices[Math.floor(Math.random() * 7)];
-    return (userRoll);
-}
-
-document.querySelector('#rollButton').addEventListener('click',userChoice);
+document.querySelector('#rollButton').addEventListener('click',makeComputerChoice);
 
