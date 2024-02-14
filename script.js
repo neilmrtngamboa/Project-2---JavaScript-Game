@@ -3,10 +3,28 @@ let computerScore = 0;
 
 function makeComputerChoice(){
     const choices = [1,2,3,4,5,6];
-    const choice = choices[Math.floor(Math.random() * 7)];
-    return(choice);
+    const roll = choices[Math.floor(Math.random() * 6)];
+    return(roll);
 
 }
 
-document.querySelector('#rollButton').addEventListener('click',makeComputerChoice);
+function userChoice(){
+    const userChoices = [1,2,3,4,5,6];
+    const userRoll = userChoices[Math.floor(Math.random() * 6)];
+    return(userRoll);
+}
+
+document.querySelector('#rollButton').addEventListener('click', () => {
+
+    const computerRoll = makeComputerChoice();
+    const userRandomroll = userChoice();
+
+    if (userRandomroll > computerRoll){
+        alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`);
+    } else if (computerRoll > userRandomroll){
+        alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You lose this round 🥺`);
+    }
+    
+});
+
 
