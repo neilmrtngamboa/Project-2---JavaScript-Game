@@ -42,8 +42,10 @@ document.querySelector('#rollButton').addEventListener('click', () => {
 function updateScores(){
     document.querySelector('#userScore').innerHTML = userScore;
     document.querySelector('#computerScore').innerHTML = computerScore;
+    let winner = document.querySelector('#snd4');
 
     if (userScore == 3){
+        winner.play();
         alert("You have won the game!");
         location.reload();
 
