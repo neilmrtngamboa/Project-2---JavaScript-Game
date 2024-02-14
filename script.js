@@ -19,9 +19,11 @@ document.querySelector('#rollButton').addEventListener('click', () => {
     diceRoll.play();
     const computerRoll = makeComputerChoice();
     const userRandomroll = userChoice();
+    let winSound = document.querySelector('#snd2');
 
     if (userRandomroll > computerRoll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`);
+        winSound.play();
         userScore++;
     } else if (computerRoll > userRandomroll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You lose this round 🥺`);
