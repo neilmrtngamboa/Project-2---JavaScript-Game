@@ -5,4 +5,20 @@
 .wordFont{
     font-family: "VT323", monospace;
 }
+
+body {
+    background-color: rgb(0, 139, 139);
+}
+
+.card-1-bg{
+    background-color: rgb(149,190,221);
+}
+
+.color-1{
+    color: rgb(255,215,106);
+}
+
+.color-2{
+    background-color: rgb(236,131,63);
+}
   
