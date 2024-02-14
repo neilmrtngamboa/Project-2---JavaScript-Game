@@ -15,7 +15,8 @@ function userChoice(){
 }
 
 document.querySelector('#rollButton').addEventListener('click', () => {
-
+    const diceRoll = document.querySelector('#snd1');
+    diceRoll.play();
     const computerRoll = makeComputerChoice();
     const userRandomroll = userChoice();
 
