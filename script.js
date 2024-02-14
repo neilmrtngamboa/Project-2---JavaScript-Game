@@ -21,10 +21,14 @@ document.querySelector('#rollButton').addEventListener('click', () => {
 
     if (userRandomroll > computerRoll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`);
+        userScore++
     } else if (computerRoll > userRandomroll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You lose this round 🥺`);
+        computerScore++;
     }
     
 });
+
+
 
 
