@@ -1,4 +1,4 @@
-let userScore = 0;
+let userScore = 0;
 let computerScore = 0;
 
 function makeComputerChoice(){
@@ -21,11 +21,13 @@ document.querySelector('#rollButton').addEventListener('click', () => {
 
     if (userRandomroll > computerRoll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`);
-        userScore++
+        userScore++;
     } else if (computerRoll > userRandomroll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You lose this round 🥺`);
         computerScore++;
     }
+
+    updateScores();
     
 });
 
@@ -34,10 +36,12 @@ function updateScores(){
     document.querySelector('#computerScore').innerHTML = computerScore;
 
     if (userScore == 3){
-        console.log("You have won the game!");
+        alert("You have won the game!");
+        location.reload();
 
-    }else {
-        console.log("you have lost the game!");
+    }else if (computerScore == 3) {
+        alert("you have lost the game!");
+        location.reload();
     }
 }
 
