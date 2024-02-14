@@ -29,6 +29,18 @@ document.querySelector('#rollButton').addEventListener('click', () => {
     
 });
 
+function updateScores(){
+    document.querySelector('#userScore').innerHTML = userScore;
+    document.querySelector('#computerScore').innerHTML = computerScore;
+
+    if (userScore == 3){
+        console.log("You have won the game!");
+
+    }else {
+        console.log("you have lost the game!");
+    }
+}
+
 
 
 
