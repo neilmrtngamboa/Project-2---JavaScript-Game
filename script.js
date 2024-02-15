@@ -47,12 +47,19 @@ function updateScores(){
 
     if (userScore == 5){
         winner.play();
-        alert("You have won the game!");
-        location.reload();
+        const winnerModal = new bootstrap.Modal(document.getElementById('resultModal'))
+        winnerModal.show();
+        document.querySelector('#newGame').addEventListener('click', () => {
+            location.reload();
+        })
 
     }else if (computerScore == 5) {
-        alert("you have lost the game!");
-        location.reload();
+        const loserModal = new bootstrap.Modal(document.getElementById('resultModal'))
+        document.querySelector('#modalMsg').innerHTML = "You have lost the game! 😜";
+        loserModal.show();
+        document.querySelector('#newGame').addEventListener('click', () => {
+            location.reload();
+        })
     }
 }
 
