@@ -1,6 +1,7 @@
 let userScore = 0;
 let computerScore = 0;
 
+
 function makeComputerChoice(){
     const choices = [1,2,3,4,5,6];
     const roll = choices[Math.floor(Math.random() * 6)];
@@ -44,12 +45,12 @@ function updateScores(){
     document.querySelector('#computerScore').innerHTML = computerScore;
     let winner = document.querySelector('#snd4');
 
-    if (userScore == 3){
+    if (userScore == 5){
         winner.play();
         alert("You have won the game!");
         location.reload();
 
-    }else if (computerScore == 3) {
+    }else if (computerScore == 5) {
         alert("you have lost the game!");
         location.reload();
     }
