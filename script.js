@@ -45,7 +45,7 @@ function updateScores(){
     document.querySelector('#computerScore').innerHTML = computerScore;
     let winner = document.querySelector('#snd4');
 
-    if (userScore == 5){
+    if (userScore >= 5){
         winner.play();
         const winnerModal = new bootstrap.Modal(document.getElementById('resultModal'))
         winnerModal.show();
@@ -53,7 +53,7 @@ function updateScores(){
             location.reload();
         })
 
-    }else if (computerScore == 5) {
+    }else if (computerScore >= 5) {
         const loserModal = new bootstrap.Modal(document.getElementById('resultModal'))
         document.querySelector('#modalMsg').innerHTML = "You have lost the game! 😜";
         loserModal.show();
