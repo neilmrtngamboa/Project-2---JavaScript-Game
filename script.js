@@ -80,10 +80,12 @@ function updateScores(){
     }
 }
 
+//This event listener and function contains where you can play the background music of the game.
 document.querySelector('#soundOn').addEventListener('click', () => {
     document.querySelector('#bgMusic').play();
 })
 
+//This event listener and function contains where you can pause the background music of the game.
 document.querySelector('#soundOff').addEventListener('click', () => {
     document.querySelector('#bgMusic').pause();
 })
