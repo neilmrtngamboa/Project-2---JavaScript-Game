@@ -18,12 +18,14 @@ body {
     color: rgb(255,215,106);
 }
 
-.color-2{
-    background-color: rgb(236,131,63);
-}
-
 .sounds{
     display: none;
 }
   
+.diceButton{
+    transition: .3s;
+}
 
+.diceButton:hover{
+    transform: scale(1.5);
+}
