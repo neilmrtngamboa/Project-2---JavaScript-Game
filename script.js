@@ -26,17 +26,23 @@ document.querySelector('#rollButton').addEventListener('click', () => {
 
 
     if (userRandomroll > computerRoll){
-        alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`);
+        let winRound = new bootstrap.Modal(document.getElementById('roundModal'))
+        document.querySelector('#roundResultMsg').innerHTML = `You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`;
+        winRound.show();
         winSound.play();
         userScore++;
 
     } else if (computerRoll > userRandomroll){
-        alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You lose this round 🥺`);
+        let loseRound = new bootstrap.Modal(document.getElementById('roundModal'))
+        document.querySelector('#roundResultMsg').innerHTML = `You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You lose this round 🥺`;
+        loseRound.show();
         loseSound.play();
         computerScore++;
         
     } else if (userRandomroll == computerRoll){
-        alert(`The dice rolled both ${userRandomroll}, this round is a DRAW!`);
+        let drawRound = new bootstrap.Modal(document.getElementById('roundModal'))
+        document.querySelector('#roundResultMsg').innerHTML = `The dice rolled both ${userRandomroll}, this round is a DRAW!`;
+        drawRound.show();
     }
 
     updateScores();
