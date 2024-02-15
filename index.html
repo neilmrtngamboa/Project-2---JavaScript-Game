@@ -16,93 +16,112 @@
 
 </head>
 <body>
-    <div class="container container-fluid">
-        <h1 class="text-center pt-3 headFont color-1">DICE GAME</h1>
-        <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary d-flex mx-auto mt-4 wordFont fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Instructions
-            </button>
-        
-  
-        <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5 wordFont" id="exampleModalLabel">Instructions</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <img class="img-fluid" src="https://cdn.pixabay.com/animation/2023/11/08/17/50/17-50-28-149_512.gif" alt="">
-                        <div class="modal-body wordFont fs-5">
-                        You have to roll the dice. Whoever gets the higher number wins the round and whoever scores 3 points, WINS THE GAME! Goodluck!
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary wordFont" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-3">
-                <div class="col-md-12">
-                    <div class="card shadow">
-                        <div class="card-body card-1-bg">
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-body headFont">
-                                            <h5 class="">User Score: 
-                                                <span id="userScore">0</span>
-                                            </h5>
-                                        </div>
-                                    </div>
+    <!--For Background Animation-->
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+         
+            <div class="container container-fluid">
+                <h1 class="text-center pt-3 headFont color-1">DICE GAME</h1>
+                <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary d-flex mx-auto mt-4 wordFont fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Instructions
+                    </button>
+                
+          
+                <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 wordFont" id="exampleModalLabel">Instructions</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-body headFont">
-                                            <h5>
-                                                Computer Score:
-                                                <span id="computerScore">0</span>
-                                            </h5>
-
-                                        </div>
-                                    </div>
-                            
+                                <img class="img-fluid" src="https://cdn.pixabay.com/animation/2023/11/08/17/50/17-50-28-149_512.gif" alt="">
+                                <div class="modal-body wordFont fs-5">
+                                You have to roll the dice. Whoever gets the higher number wins the round and whoever scores 3 points, WINS THE GAME! Goodluck!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary wordFont" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
-                        <button class="btn btn-dark btn-lg mt-3 d-flex mx-auto headFont color-2 border-0" id="rollButton">Roll Dice</button>
-                        
                         </div>
                     </div>
-                </div>
-
+        
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div class="card shadow">
+                                <div class="card-body card-1-bg">
+        
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card shadow">
+                                                <div class="card-body headFont">
+                                                    <h5 class="">User Score: 
+                                                        <span id="userScore">0</span>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card shadow">
+                                                <div class="card-body headFont">
+                                                    <h5>
+                                                        Computer Score:
+                                                        <span id="computerScore">0</span>
+                                                    </h5>
+        
+                                                </div>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                <button class="btn btn-dark btn-lg mt-3 d-flex mx-auto headFont color-2 border-0" id="rollButton">Roll Dice</button>
+                                
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+          
+                <!-- Modal 2 -->
+                    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="staticBackdroplabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Game Results</h1>
+                                </div>
+                                <div class="modal-body display-5" id="modalMsg">
+                                Congratulations! You have won the game! 🎉
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" id="newGame">New Game</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+        
+                    
+        
+                    <audio controls src="/soundeffects/Rolling Dice - Sound Effect (HD).mp3" id="snd1" style="display: none;"></audio>
+                    <audio controls id="snd4" style="display: none;" src="/soundeffects/Meron kang 10 Thousand Sound fx.mp3"></audio>
+                    <audio controls id="snd3" style="display: none;" src="/soundeffects/Eat Bulaga Laugh Sound Effect!.mp3"></audio>
+                    <audio controls id="snd2" style="display: none;" src="/soundeffects/BIGYAN NG JACKET (SOUND EFFECT).mp3"></audio>
             </div>
-  
-        <!-- Modal -->
-            <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="staticBackdroplabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Game Results</h1>
-                        </div>
-                        <div class="modal-body display-5" id="modalMsg">
-                        Congratulations! You have won the game! 🎉
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="newGame">New Game</button>
-                        </div>
-                    </div>
-                </div>
-            </div>    
 
-            
-
-            <audio controls src="/soundeffects/Rolling Dice - Sound Effect (HD).mp3" id="snd1" style="display: none;"></audio>
-            <audio controls id="snd4" style="display: none;" src="/soundeffects/Meron kang 10 Thousand Sound fx.mp3"></audio>
-            <audio controls id="snd3" style="display: none;" src="/soundeffects/Eat Bulaga Laugh Sound Effect!.mp3"></audio>
-            <audio controls id="snd2" style="display: none;" src="/soundeffects/BIGYAN NG JACKET (SOUND EFFECT).mp3"></audio>
     </div>
+
+    
 
 
 
