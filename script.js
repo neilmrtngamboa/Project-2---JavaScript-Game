@@ -1,5 +1,6 @@
 let userScore = 0;
 let computerScore = 0;
+let roundNo = 1;
 
 
 function makeComputerChoice(){
@@ -16,7 +17,7 @@ function userChoice(){
 }
 
 document.querySelector('#rollButton').addEventListener('click', () => {
-
+    document.querySelector('#roundNumber').innerHTML = roundNo;
     const diceRoll = document.querySelector('#snd1');
     diceRoll.play();
     const computerRoll = makeComputerChoice();
@@ -25,6 +26,8 @@ document.querySelector('#rollButton').addEventListener('click', () => {
     let loseSound = document.querySelector('#snd3');
 
 
+
+    roundNo++;
     if (userRandomroll > computerRoll){
         let winRound = new bootstrap.Modal(document.getElementById('roundModal'))
         document.querySelector('#roundResultMsg').innerHTML = `You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`;
@@ -45,6 +48,7 @@ document.querySelector('#rollButton').addEventListener('click', () => {
         drawRound.show();
     }
 
+    
     updateScores();
     
 });
