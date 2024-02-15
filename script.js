@@ -16,6 +16,7 @@ function userChoice(){
 }
 
 document.querySelector('#rollButton').addEventListener('click', () => {
+
     const diceRoll = document.querySelector('#snd1');
     diceRoll.play();
     const computerRoll = makeComputerChoice();
@@ -23,10 +24,12 @@ document.querySelector('#rollButton').addEventListener('click', () => {
     let winSound = document.querySelector('#snd2');
     let loseSound = document.querySelector('#snd3');
 
+
     if (userRandomroll > computerRoll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You win this round!`);
         winSound.play();
         userScore++;
+
     } else if (computerRoll > userRandomroll){
         alert(`You have rolled ${userRandomroll} and the computer rolled ${computerRoll}. You lose this round 🥺`);
         loseSound.play();
@@ -34,7 +37,7 @@ document.querySelector('#rollButton').addEventListener('click', () => {
         
     } else if (userRandomroll == computerRoll){
         alert(`The dice rolled both ${userRandomroll}, this round is a DRAW!`);
-    } 
+    }
 
     updateScores();
     
