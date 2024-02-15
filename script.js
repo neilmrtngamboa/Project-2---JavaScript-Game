@@ -80,6 +80,16 @@ function updateScores(){
     }
 }
 
+document.querySelector('#soundOn').addEventListener('click', () => {
+    document.querySelector('#bgMusic').play();
+})
+
+document.querySelector('#soundOff').addEventListener('click', () => {
+    document.querySelector('#bgMusic').pause();
+})
+
+
+
 
 
 

@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/88f05daeb4.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+    <audio controls autoplay style="display: none;" id="bgMusic" src="/soundeffects/Pizzicato Playtime - Comedy Background Music (HD).mp3"></audio>
     
     <div class="container container-fluid">
         <h1 class="text-center pt-3 headFont color-1">DICE GAME</h1>
@@ -88,7 +90,10 @@
                 </div>
 
             </div>
-
+            <span>
+                <button class="btn" id="soundOn"><i class="fa-solid fa-volume-high fa-2x sounds"></i></button>
+                <button class="btn" id="soundOff"><i class="fa-solid fa-volume-xmark fa-2x sounds"></i></button>
+            </span>
             
   
         <!-- Round Result Modal -->
@@ -127,12 +132,12 @@
             </div>    
 
             
-
+            
             <audio controls src="/soundeffects/Rolling Dice - Sound Effect (HD).mp3" id="snd1" style="display: none;"></audio>
             <audio controls id="snd4" style="display: none;" src="/soundeffects/Meron kang 10 Thousand Sound fx.mp3"></audio>
             <audio controls id="snd3" style="display: none;" src="/soundeffects/Eat Bulaga Laugh Sound Effect!.mp3"></audio>
             <audio controls id="snd2" style="display: none;" src="/soundeffects/BIGYAN NG JACKET (SOUND EFFECT).mp3"></audio>
-            <audio controls autoplay style="display: none;" src="/soundeffects/Pizzicato Playtime - Comedy Background Music (HD).mp3"></audio>
+            
     </div>
 
     
