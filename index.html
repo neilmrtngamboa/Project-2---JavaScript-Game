@@ -20,7 +20,7 @@
     <div class="container container-fluid">
         <h1 class="text-center pt-3 headFont color-1">DICE GAME</h1>
         <!-- instructions Button trigger modal -->
-            <button type="button" class="btn btn-primary d-flex mx-auto mt-4 wordFont fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-success d-flex mx-auto mt-4 wordFont fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Instructions
             </button>
         
@@ -49,7 +49,7 @@
                     <div class="card shadow">
                         <div class="card-body card-1-bg">
                             <div class="text-center mb-3">
-                                <h3 class="wordFont display-3">Round
+                                <h3 class="wordFont display-3 text-light">Round
                                     <span id="roundNumber" class="wordFont display-3"></span>
                                 </h3>
                                 
@@ -113,13 +113,13 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5 headFont" id="exampleModalLabel">Game Results</h1>
+                            <h1 class="modal-title fs-5 headFont d-flex mx-auto" id="exampleModalLabel">Game Results</h1>
                         </div>
                         <div class="modal-body display-5 wordFont" id="modalMsg">
                         Congratulations! You have won the game! 🎉
                         </div>
                         <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="newGame">New Game</button>
+                        <button type="button" class="btn btn-success" id="newGame">New Game</button>
                         </div>
                     </div>
                 </div>
@@ -132,6 +132,8 @@
             <audio controls id="snd3" style="display: none;" src="/soundeffects/Eat Bulaga Laugh Sound Effect!.mp3"></audio>
             <audio controls id="snd2" style="display: none;" src="/soundeffects/BIGYAN NG JACKET (SOUND EFFECT).mp3"></audio>
     </div>
+
+    
 
 
 
